@@ -2,14 +2,14 @@
 
 namespace Parish.Data.Entities
 {
-    public partial class DbContext : Microsoft.EntityFrameworkCore.DbContext
+    public partial class ParishDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public static string ConnectionString;
-        public DbContext()
+        public ParishDbContext()
         {
         }
 
-        public DbContext(DbContextOptions<DbContext> options)
+        public ParishDbContext(DbContextOptions<ParishDbContext> options)
             : base(options)
         {
         }

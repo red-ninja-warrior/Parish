@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Parish.Data.Entities
 {
@@ -12,6 +11,7 @@ namespace Parish.Data.Entities
         }
 
         public long FamilyId { get; set; }
+        public string FamilyName { get; set; }
         public long MemberId { get; set; }
         public bool IsRegistered { get; set; }
 

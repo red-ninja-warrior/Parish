@@ -21,8 +21,9 @@ namespace Parish.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            DbContext.ConnectionString = Configuration.GetConnectionString("ParishDb");
+            ParishDbContext.ConnectionString = Configuration.GetConnectionString("ParishDb");
             services.AddScoped<IParishRepository, ParishRepository>();
+            services.AddScoped<ParishDbContext, ParishDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
@@ -63,6 +64,12 @@ namespace Parish.Web
                 {
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Parish Api V1");
             });
         }
     }

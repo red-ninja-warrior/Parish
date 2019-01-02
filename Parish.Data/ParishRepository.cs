@@ -5,9 +5,9 @@ namespace Parish.Data
 {
     public class ParishRepository : IParishRepository
     {
-        private readonly DbContext _context;
+        private readonly ParishDbContext _context;
 
-        public ParishRepository(DbContext context)
+        public ParishRepository(ParishDbContext context)
         {
             _context = context;
         }

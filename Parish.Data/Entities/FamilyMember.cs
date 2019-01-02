@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Parish.Data.Entities
+﻿namespace Parish.Data.Entities
 {
     public partial class FamilyMember
     {
